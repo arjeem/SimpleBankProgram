@@ -33,8 +33,8 @@ namespace SimpleBankProgram.Data
 
             // check withdrawal limits
             double accountWithdrawalLimit = bankAccount.GetWithdrawalLimit();
-            // if not -1, withdrawal limit has been set, but cannot withdraw less than 1 cent
-            if (accountWithdrawalLimit > 0.00)
+            // if not -1, withdrawal limit has been set
+            if (accountWithdrawalLimit != -1)
             {
                 // Exceeded withdrawal limit
                 if (withdrawalAmount > accountWithdrawalLimit)

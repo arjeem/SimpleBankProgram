@@ -9,12 +9,12 @@ namespace SimpleBankProgram.Objects
     class Bank
     {
         private string Name;
-        private List<BankAccount> bankAccounts;
+        private List<BankAccount> BankAccounts;
 
         public Bank(string name)
         {
             Name = name;
-            bankAccounts = new List<BankAccount>();
+            BankAccounts = new List<BankAccount>();
         }
 
         public string GetName()
@@ -29,7 +29,7 @@ namespace SimpleBankProgram.Objects
 
         public void AddBankAccount(BankAccount bankAccount)
         {
-            bankAccounts.Add(bankAccount);
+            BankAccounts.Add(bankAccount);
         }
     }
 }

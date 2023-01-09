@@ -70,7 +70,14 @@ namespace SimpleBankProgram.Objects
 
         public void SetWithdrawalLimit(double withdrawalLimit)
         {
-            WithdrawalLimit = withdrawalLimit;
+            if (withdrawalLimit > 0)
+            {
+                WithdrawalLimit = withdrawalLimit;
+            }
+            else
+            {
+                throw new Exception("Can not set withdrawal limit at zero or less.");
+            }
         }
     }
 }
